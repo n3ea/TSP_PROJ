@@ -166,8 +166,8 @@ float: left;
   text-decoration: none;
   margin: 4px 2px;
       position: absolute;
-      top: 840px;
-      left: 1190px;
+      top: 800px;
+      left: 1170px;
 }
 
 .btnserv {
@@ -176,8 +176,8 @@ float: left;
   text-decoration: none;
   margin: 4px 2px;
       position: absolute;
-      top: 800px;
-      left: 1190px;
+      top: 840px;
+      left: 1170px;
 }
 
 .map {
