@@ -1,0 +1,34 @@
+
+<!--#tbase/tbase/book/templates/book/book_home.html-->
+{% extends 'main_zori/layout.html' %}
+
+
+{% block title %}Свободные дома{% endblock %}
+
+{% block content %}
+    <div class="features">
+      <h1>Домики, которые вы можете забронировать</h1>
+        {% if rooms %}
+           {% for el in rooms %}
+                <div class = "alert alert-warning">
+                    <h3> {{ el.title }} </h3>
+                    {% if el.places %}
+                        <p> Количество мест: {{ el.places }} </p>
+                    {% else %}
+                        <p></p>
+                    {% endif %}
+                    <p> Стоимость: {{ el.price }} </p>
+                    {% if el.h_ph %}
+                        <p><img src="{{el.h_ph.url}}" width="220px", height="150px"></p>
+                    {% else %}
+                        <p></p>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        {% else %}
+            <p> Нет доступных домов для брони в эти даты></p>
+        {% endif %}
+    </div>
+
+
+{% endblock %}

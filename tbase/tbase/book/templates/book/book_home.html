@@ -1,0 +1,37 @@
+
+<!--#tbase/tbase/book/templates/book/book_home.html-->
+{% extends 'main_zori/layout.html' %}
+
+
+{% block title %}Страница для брони{% endblock %}
+
+{% block content %}
+    <div class="features">
+      <h1>Домики, которые вы можете забронировать</h1>
+        <h2>Введите желаемую дату заезда</h2>
+        <form method="" action="{% url 'free_rooms' %}">
+            {% csrf_token %}
+            <p>Заезд: <input name="b_start" type = "date" /></p>
+            <p>Выезд: <input name="b_end" type = "date" /></p>
+            <input type="submit" value="Send" />
+        </form>
+       {% for el in all_houses %}
+            <div class = "alert alert-warning">
+                <h3> {{ el.title }} </h3>
+                {% if el.places %}
+                    <p> Количество мест: {{ el.places }} </p>
+                {% else %}
+                    <p></p>
+                {% endif %}
+                <p> Стоимость: {{ el.price }} </p>
+                {% if el.h_ph %}
+                    <p><img src="{{el.h_ph.url}}" width="220px", height="150px"></p>
+                {% else %}
+                    <p></p>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+
+
+{% endblock %}

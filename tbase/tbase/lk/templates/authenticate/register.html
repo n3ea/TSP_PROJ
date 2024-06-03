@@ -1,0 +1,23 @@
+
+<!-- tbase/tbase/lk/templates/authenticate/register.html -->
+{% extends 'main_zori/layout.html' %}
+{% load crispy_forms_tags %}
+{% block title %}Регистрация пользователя{% endblock %}
+
+{% block content %}
+<div class="features">
+    <h1>Регистрация пользователя</h1>
+    <br/>
+    <p style="font-size:35px;">Заполните форму для регистрации</p>
+    <form method="post">
+        {% csrf_token %}
+        {{ user_form|crispy }}
+        {{ client_form|crispy }}
+        <button type="submit" class="btn btn-secondary">Зарегистрироваться</button>
+    </form>
+</div>
+{% endblock %}
+
+
+
+

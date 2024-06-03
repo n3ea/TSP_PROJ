@@ -1,0 +1,25 @@
+{% extends 'main_zori/layout.html' %}
+
+{% block title %}Ваши бронирования{% endblock %}
+
+{% block content %}
+<div class="features">
+    <h1>Ваши бронирования</h1>
+    <br/>
+    {% if bookings %}
+        {% for booking in bookings %}
+        <div class = "alert alert-warning">
+            <h3>ID брони: {{ booking.id_req }}</h3>
+            <p><strong>Дата заезда:</strong> {{ booking.b_start }}</p>
+            <p><strong>Дата выезда:</strong> {{ booking.b_end }}</p>
+            <p><strong>Статус:</strong> {{ booking.get_stat_display }}</p>
+            <br/>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p>У вас пока нет бронирований</p>
+    {% endif %}
+</div>
+{% endblock %}
+

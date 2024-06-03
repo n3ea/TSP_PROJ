@@ -1,0 +1,32 @@
+{% extends 'main_zori/layout.html' %}
+
+
+{% block title %}Страница для брони{% endblock %}
+
+{% block content %}
+    <div class="features">
+      <h1>Услуги, которые вы можете забронировать</h1>
+        <!--<h2>Введите желаемые даты</h2>
+        <form method="post" action="postdate/">
+            {% csrf_token %}
+            <p>Заезд:<br> <input name="b_start" type = "date" /></p>
+            <p>Выезд:<br> <input name="b_end" type="date" /></p>
+            <input type="submit" value="Send" />
+        </form>-->
+       {% for el in all_serv %}
+            <div class = "alert alert-warning">
+                <h3> {{ el.serv_name }} </h3>
+                {% if el.lasting %}
+                    <p> Длительность (часы):  {{ el.lasting }} </p>
+                {% else %}
+                    <p></p>
+                {% endif %}
+                {% if el.price %}
+                    <p> Стоимость:  {{ el.price }} </p>
+                {% else %}
+                    <p></p>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

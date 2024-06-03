@@ -1,0 +1,25 @@
+
+<!--#tbase/tbase/lk/templates/authenticate/log_in.html-->
+{% extends 'main_zori/layout.html' %}
+
+{% block title %}Страница для аунтетификации{% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="features">
+    <h1>Ваш личный кабинет здесь</h1>
+    <br/>
+    <p style="font-size:35px;">Пожалуйста, авторизуйтесь для входа в личный кабинет</p>
+    <form action="{% url 'login' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="InputUsername" class="form-label">Username</label>
+            <input type="text" class="form-control" name="username" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="InputPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" name="password">
+        </div>
+        <input type="submit" value="Submit" class="btn btn-secondary">
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,83 @@
+
+<!-- tbase/tbase/main_zori/templates/main_zori/layout.html -->
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'main_zori/css/main_zori.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
+</head>
+<body>
+<aside>
+    <div class="header-container">
+        <div class="logo-container">
+            <img src="{% static 'main_zori/img/zori_logo.jpg' %}" alt="Логотип Зори Жигулей" width="75" height="75">
+        </div>
+        <div class="logo-text">Зори Жигулей</div>
+        <style>
+            /* Стили для контейнера с логотипом и надписью */
+            .header-container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px;
+            }
+
+            /* Стили для логотипа */
+            .logo-container {
+                margin-right: 20px;
+            }
+
+            /* Стили для надписи */
+            .logo-text {
+                font-weight: bold;
+                font-size: 24px;
+                text-align: center;
+            }
+        </style>
+    </div>
+    <h3>Навигация</h3>
+    <ul>
+        <a href="{% url 'home' %}"><li><i class="fa-solid fa-bars" style="color: #e7eee7;"></i>  Главная</li></a>
+        <a href="{% url 'book_home' %}"><li><i class="fa-solid fa-house-chimney-user" style="color: #e7eee7;"></i> Дома</li></a>
+        <a href="{% url 'book_serv' %}"><li><i class="fa-solid fa-table-list" style="color: #e7eee7;"></i> Услуги</li></a>
+        {% if user.is_authenticated %}
+        <a href="{% url 'user_bookings' %}"><li><i class="fa-solid fa-user" style="color: #e7eee7;"></i> Личный кабинет</li></a>
+        <a href="{% url 'logout' %}"><li><i class="fa-solid fa-sign-out-alt" style="color: #e7eee7;"></i> Выйти</li></a>
+        <a href="{% url 'create' %}"><li><button class="btn btn-info"><i class="fas fa-plus-circle"></i> Оформить бронь</button></li></a>
+        {% else %}
+        <a href="{% url 'login' %}"><li><i class="fa-solid fa-sign-in-alt" style="color: #e7eee7;"></i> Войти</li></a>
+        <a href="{% url 'register' %}"><li><i class="fa-solid fa-user-plus" style="color: #e7eee7;"></i> Регистрация</li></a>
+        {% endif %}
+    </ul>
+</aside>
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<style>
+    #carouselExampleIndicators {
+        height: 400px;
+        width: 1120px;
+    }
+    .carousel-item img {
+        height: 400px;
+        object-fit: cover; /* Сохранить соотношение сторон изображений */
+    }
+</style>
+</body>
+</html>
+

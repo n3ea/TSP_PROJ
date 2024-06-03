@@ -1,0 +1,186 @@
+body {
+     background: #62a399;
+
+}
+
+aside {
+    float: left;
+    background: #007d92;
+    width: 20%;
+    padding: 2.5%;
+    height: 290vh;
+    color: #000000;
+    border-right: 5px solid #007d92;
+}
+
+aside img {
+    width: 80px;
+    float: left;
+}
+
+aside .logo {
+    font-size: 20px;
+    margin-left: 10px;
+    font-weight: bold;
+    position: relative;
+    top: -5px;
+}
+
+aside h3{
+    margin-top: 50px;
+    font-size: 28px;
+}
+
+aside ul {list-style: none}
+aside ul li {
+    color: #000000;
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    transition: transform .5s ease;
+}
+
+aside ul li:hover, aside ul a:hover {
+    color: #000000;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+main .features {
+
+    float: left;
+    color: #000000;
+    margin: 30px;
+    text-align: center;
+    width: 75%;
+}
+
+main.features h1 {font-size: 30px;}
+main.features p {max-width: 40px; margin: 10px auto}
+
+.alert-warning{
+    float: left;
+    clear: both;
+    width: 400px;
+    margin: 20px 34%;
+    text-align: left;
+}
+
+.text3 {
+    float: left;
+    color: #000000;
+    margin: 10px;
+    text-indent: 50px;
+    position: absolute;
+      top: 750px;
+      left: 280px;
+    text-align: left;
+    width: 40%;
+
+}
+
+.text2 {
+    float: left;
+    color: #000000;
+    margin: 10px;
+    text-indent: 50px;
+    position: absolute;
+      top: 800px;
+      left: 320px;
+    text-align: left;
+    width: 50%;
+
+}
+
+.text4 {
+float: left;
+    color: #000000;
+    margin: 10px;
+    text-indent: 50px;
+    position: absolute;
+      top: 1760px;
+      left: 700px;
+    text-align: left;
+    width: 50%;
+}
+
+.text5 {
+float: left;
+    color: #000000;
+    margin: 10px;
+    text-indent: 50px;
+    position: absolute;
+      top: 1960px;
+      left: 380px;
+    text-align: left;
+    width: 50%;
+}
+.text6 {
+float: left;
+    color: #000000;
+    margin: 10px;
+    text-indent: 50px;
+    position: absolute;
+      top: 2020px;
+      left: 380px;
+    text-align: left;
+    width: 50%;
+}
+.text7 {
+float: left;
+    color: #000000;
+    margin: 10px;
+    text-indent: 50px;
+    position: absolute;
+      top: 1960px;
+      left: 1000px;
+    text-align: left;
+    width: 50%;
+}
+.text9 {
+float: left;
+    color: #000000;
+    margin: 10px;
+    text-indent: 50px;
+    position: absolute;
+      top: 2020px;
+      left: 1000px;
+    text-align: left;
+    width: 50%;
+}
+.text8 {
+float: left;
+    color: #000000;
+    margin: 10px;
+    text-indent: 50px;
+    position: absolute;
+      top: 1050px;
+      left: 690px;
+    text-align: left;
+    width: 50%;
+}
+
+.btnhouse {
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+      position: absolute;
+      top: 840px;
+      left: 1190px;
+}
+
+.btnserv {
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+      position: absolute;
+      top: 800px;
+      left: 1190px;
+}
+
+.map {
+position: absolute;
+      top: 1120px;
+}

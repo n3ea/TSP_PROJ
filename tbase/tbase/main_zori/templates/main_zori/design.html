@@ -1,0 +1,130 @@
+{% extends 'main_zori/layout.html' %}
+
+
+{% block title %}Главная страница{% endblock %}
+{% block content %}
+   <div class="features">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="4000">
+           <ol class="carousel-indicators">
+           </ol>
+           <div class="carousel-inner">
+               <div class="carousel-item active">
+                   <img class="d-block w-100" src="images/1.jpg" width="1120" alt="First slide">
+               </div>
+               <div class="carousel-item">
+                   <img class="d-block w-100" src="images/2.jpg" alt="Second slide">
+               </div>
+               <div class="carousel-item">
+                   <img class="d-block w-100" src="images/3.jpg" alt="Third slide">
+               </div>
+               <div class="carousel-item">
+                   <img class="d-block w-100" src="images/4.jpg" alt="Forth slide">
+               </div>
+           </div>
+       </div>
+
+       <div class="text1">
+            <h4 style="font-size: 23px; margin-top: 35px;">
+                База отдыха "Зори Жигулей" - уникальный вариант для отдыха с близкими.
+                Несмотря на то, что дорога из центра города до нас займет всего 50 минут,
+                "Зори Жигулей" находятся в тихом и живописной месте.
+            </h4>
+            <h4 style="font-size: 23px;">
+            </h4>
+            <h4 style="font-size: 23px;">
+                История турбазы началась еще в советские времена,
+                на данный момент проходит реконструкция.
+            </h4>
+        </div>
+
+       <h1>О нас </h1>
+       <style>
+           h1 {
+            margin-bottom: 15px;
+            margin-top: 89px;
+           }
+       </style>
+
+        <div class="text3">
+                <h4 style="font-size: 23px;">
+                На территории турбазы находятся:
+                </h4>
+        </div>
+                <div class="text2">
+                    <h4 style="font-size: 23px;">
+
+                        <ul>
+                          <li>Cвой оборудованный песочный пляж </li>
+                          <li>Большая беседка для мероприятий на открытом воздухе </li>
+                          <li>Общая мангальная зона и кухня </li>
+                          <li>Туалет и душ </li>
+                          <li>27 домиков размещением от 2-4 человек </li>
+                        </ul>
+                    </h4>
+                </div>
+
+
+       <div class="btnhouse">
+            <a href="{% url 'book_home' %}"><li><button class = "btn btn-info "><i class="fa-solid fa-house-chimney-user" style="color: #e7eee7;"></i> Посмотреть дома</button></li></a>
+       </div>
+       <div class="btnserv">
+            <a href="{% url 'book_serv' %}"><li><button class = "btn btn-info "><i class="fa-solid fa-house-chimney-user" style="color: #e7eee7;"></i> Посмотреть услуги</button></li></a>
+       </div>
+        <div class ="text8">
+            <h3> Как до нас добраться</h3>
+        </div>
+      <div class="map">
+        <div class="dg-widget-link" >
+           <a href="http://2gis.ru/samara/firm/2533803072189345/center/50.08169174194337,53.43197366482816/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">
+               Посмотреть на карте Самары
+           </a>
+       </div>
+
+       <div class="dg-widget-link" >
+           <a href="http://2gis.ru/samara/firm/2533803072189345/photos/2533803072189345/center/50.08169174194337,53.43197366482816/zoom/17?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=photos">
+               Фотографии компании
+           </a>
+       </div>
+
+       <div class="dg-widget-link" >
+           <a href="http://2gis.ru/samara/center/50.081213,53.431748/zoom/16/routeTab/rsType/bus/to/50.081213,53.431748╎Зори Жигулей, база отдыха?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route">
+               Найти проезд до Зори Жигулей, база отдыха
+           </a>
+       </div>
+
+       <!-- Loading the map widget from 2GIS -->
+       <script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>
+       <script charset="utf-8">
+           new DGWidgetLoader({
+               "width": 1120,
+               "height": 650,
+               "borderColor": "#a3a3a3",
+               "pos": {"lat": 53.43197366482816, "lon": 50.08169174194337, "zoom": 16},
+               "opt": {"city": "samara"},
+               "org": [{"id": "2533803072189345"}]
+           });
+       </script>
+       <noscript style="color:#c00;font-size:16px;font-weight:bold;">
+           Виджет карты использует JavaScript. Включите его в настройках вашего браузера.
+       </noscript>
+      </div>
+
+
+        <div class="text4">
+            <h1>Наши контакты:</h1>
+        </div>
+        <div class="text5">
+            <h4 style="font-size: 23px;">Email: ecozory@yandex.ru</h4>
+        </div>
+        <div class="text6">
+            <h4 style="font-size: 23px;"> Phone: +7‒937‒214‒42‒42</h4>
+        </div>
+        <div class="text7">
+            <h4 style="font-size: 23px;">Vk: https://vk.com/public215208115</h4>
+        </div>
+       <div class="text9">
+            <h4 style="font-size: 23px;">Phone: +7‒937‒659-86-24</h4>
+        </div>
+   </div>
+
+{% endblock %}
